@@ -39,6 +39,7 @@ const htmlToElementOptKeys = [
   'textComponentProps',
   'NodeComponent',
   'nodeComponentProps',
+  'ignoreListPrefix'
 ];
 
 class HtmlView extends PureComponent {

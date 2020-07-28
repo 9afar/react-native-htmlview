@@ -130,11 +130,11 @@ export default function htmlToElement(rawHtml, customOpts = {}, done) {
 
           if(!parent){
             listItemPrefix = null;
-          } else if (parent.name === 'ol') {
+          } else if (parent.name === 'ol' && !opts.ignoreListPrefix) {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
               {`${orderedListCounter++}. `}
             </TextComponent>);
-          } else if (parent.name === 'ul') {
+          } else if (parent.name === 'ul' && !opts.ignoreListPrefix) {
             listItemPrefix = (<TextComponent style={[defaultStyle, customStyle]}>
               {opts.bullet}
             </TextComponent>);
